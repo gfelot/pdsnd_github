@@ -8,11 +8,24 @@ CITY_DATA: Dict[str, str] = {"chicago": "chicago.csv",
                              "new york": "new_york_city.csv",
                              "washington": "washington.csv"}
 
-CITIES_LIST: List[str] = ["chicago", "new york", "washington"]
+CITIES_LIST: List[str] = ["chicago",
+                          "new york",
+                          "washington"]
 
-MONTHS_LIST: List[str] = ["january", "february", "march", "april", "may", "june"]
+MONTHS_LIST: List[str] = ["january",
+                          "february",
+                          "march",
+                          "april",
+                          "may",
+                          "june"]
 
-DAYS_LIST: List[str] = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+DAYS_LIST: List[str] = ["sunday",
+                        "monday",
+                        "tuesday",
+                        "wednesday",
+                        "thursday",
+                        "friday",
+                        "saturday"]
 
 fg.set_style("orange", RgbFg(255, 150, 50))
 
