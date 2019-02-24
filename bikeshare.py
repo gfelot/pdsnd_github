@@ -3,54 +3,32 @@ import json
 from typing import List, Dict
 import pandas as pd
 from sty import fg, bg, rs, RgbFg
+from utils import print_section, print_result, print_error
 
 CITY_DATA: Dict[str, str] = {"chicago": "chicago.csv",
                              "new york": "new_york_city.csv",
                              "washington": "washington.csv"}
 
-CITIES_LIST: List[str] = ["chicago", "new york", "washington"]
+CITIES_LIST: List[str] = ["chicago",
+                          "new york",
+                          "washington"]
 
-MONTHS_LIST: List[str] = ["january", "february", "march", "april", "may", "june"]
+MONTHS_LIST: List[str] = ["january",
+                          "february",
+                          "march",
+                          "april",
+                          "may",
+                          "june"]
 
-DAYS_LIST: List[str] = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+DAYS_LIST: List[str] = ["sunday",
+                        "monday",
+                        "tuesday",
+                        "wednesday",
+                        "thursday",
+                        "friday",
+                        "saturday"]
 
 fg.set_style("orange", RgbFg(255, 150, 50))
-
-
-def print_section(message):
-    """
-        Help function to factorise the print of each section"s message.
-
-        Args:
-        (str) message - message to print
-    """
-
-    temp = bg.da_cyan + message + bg.rs
-    print()
-    print(temp)
-    print()
-
-
-def print_result(message, value):
-    """
-        Help function to factorise the print of each result"s message.
-
-        Args:
-        (str) message - message to print
-        (int64) value - value calculated
-    """
-
-    temp = bg.green + message + str(value) + bg.rs
-    print(temp)
-
-
-def print_error():
-    """
-        Help function to factorise the print of error message.
-
-    """
-    error_message = bg.red + "Unavailable answer !" + bg.rs
-    print(error_message)
 
 
 def get_filters():
