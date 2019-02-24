@@ -38,9 +38,9 @@ def print_section(message):
         (str) message - message to print
     """
 
-    temp = bg.da_cyan + message + bg.rs
+    section_message = bg.da_cyan + message + bg.rs
     print()
-    print(temp)
+    print(section_message)
     print()
 
 
@@ -53,8 +53,8 @@ def print_result(message, value):
         (int64) value - value calculated
     """
 
-    temp = bg.green + message + str(value) + bg.rs
-    print(temp)
+    result_message = bg.green + message + str(value) + bg.rs
+    print(result_message)
 
 
 def print_error():
