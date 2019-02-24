@@ -3,6 +3,7 @@ import json
 from typing import List, Dict
 import pandas as pd
 from sty import fg, bg, rs, RgbFg
+from utils import print_section, print_result, print_error
 
 CITY_DATA: Dict[str, str] = {"chicago": "chicago.csv",
                              "new york": "new_york_city.csv",
@@ -28,42 +29,6 @@ DAYS_LIST: List[str] = ["sunday",
                         "saturday"]
 
 fg.set_style("orange", RgbFg(255, 150, 50))
-
-
-def print_section(message):
-    """
-        Function to factorise the print of each section"s message.
-
-        Args:
-        (str) message - message to print
-    """
-
-    section_message = bg.da_cyan + message + bg.rs
-    print()
-    print(section_message)
-    print()
-
-
-def print_result(message, value):
-    """
-        Function to factorise the print of each result"s message.
-
-        Args:
-        (str) message - message to print
-        (int64) value - value calculated
-    """
-
-    result_message = bg.green + message + str(value) + bg.rs
-    print(result_message)
-
-
-def print_error():
-    """
-        Function to factorise the print of error message.
-
-    """
-    error_message = bg.red + "Unavailable answer !" + bg.rs
-    print(error_message)
 
 
 def get_filters():
