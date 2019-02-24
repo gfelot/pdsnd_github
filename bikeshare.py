@@ -19,7 +19,7 @@ fg.set_style("orange", RgbFg(255, 150, 50))
 
 def print_section(message):
     """
-        Function to factorise the print of each section"s message.
+        Help function to factorise the print of each section"s message.
 
         Args:
         (str) message - message to print
@@ -33,7 +33,7 @@ def print_section(message):
 
 def print_result(message, value):
     """
-        Function to factorise the print of each result"s message.
+        Help function to factorise the print of each result"s message.
 
         Args:
         (str) message - message to print
@@ -46,7 +46,7 @@ def print_result(message, value):
 
 def print_error():
     """
-        Function to factorise the print of error message.
+        Help function to factorise the print of error message.
 
     """
     error_message = bg.red + "Unavailable answer !" + bg.rs
